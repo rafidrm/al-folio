@@ -13,34 +13,34 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}</span>
+  <span class="title"><strong>{{entry.title}}</strong></span>
     <span class="author">
       {% for author in entry.author_array %}
         {% if forloop.length == 1 %}
           {% if author.last == site.scholar.last_name %}
-            <em>{{author.last}}, {{author.first}}</em>
+            <em>{{author.first}} {{author.last}}</em>
           {% else %}
-            {{author.last}}, {{author.first}}
+            {{author.first}} {{author.last}}
           {% endif %}
         {% else %}
           {% unless forloop.last %}
             {% if author.last == site.scholar.last_name %}
-              <em>{{author.last}}, {{author.first}}</em>,
+              <em>{{author.first}} {{author.last}}</em>,
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>, 
+                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>, 
               {% else %}
-                {{author.last}}, {{author.first}},
+                {{author.first}} {{author.last}},
               {% endif %}
             {% endif %}
           {% else %}
             {% if author.last == site.scholar.last_name %}
-              and <em>{{author.last}}, {{author.first}}</em>
+              and <em>{{author.first}} {{author.last}}</em>
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a> 
+                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a> 
               {% else %}
-                and {{author.last}}, {{author.first}}
+                and {{author.first}} {{author.last}}
               {% endif %}
             {% endif %}
           {% endunless %}
@@ -67,14 +67,17 @@
   {% if entry.arxiv %}
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
   {% endif %}
+  {% if entry.code %}
+    [<a href="{{ entry.code }}" target="_blank">Code</a>]
+  {% endif %}
   {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    [<a href="{{ entry.html }}" target="_blank">Paper</a>]
+  {% endif %}
+  {% if entry.medrxiv %}
+    [<a href="{{ entry.medrxiv }}" target="_blank">Paper</a>]
   {% endif %}
   {% if entry.pdf %}
-    [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
-  {% endif %}
-  {% if entry.supp %}
-    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
+    [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Paper</a>]
   {% endif %}
   {% if entry.poster %}
     [<a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>]
@@ -82,11 +85,25 @@
   {% if entry.slides %}
     [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
   {% endif %}
-  {% if entry.code %}
-    [<a href="{{ entry.code }}" target="_blank">Code</a>]
+  {% if entry.supp %}
+    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
   {% endif %}
   </span>
+  
+  {% if entry.notes %}
+  <span>
+    <p>{{ entry.notes }}</p>
+  </span>
+  {% endif %}
 
+  {% if entry.comments %}
+  <span>
+    <p>
+        <ul>{{ entry.comments }}</ul>
+    </p>
+  </span>
+  {% endif %}
+  
   <!-- Hidden abstract block -->
   {% if entry.abstract %}
   <span class="abstract hidden">

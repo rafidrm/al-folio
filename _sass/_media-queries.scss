@@ -53,6 +53,11 @@
   .col {
       padding: $img-spacing/3;
   }
+  .data_image { 
+    width: auto;
+    height:100%;
+    border-bottom-left-radius: 20px; 
+  }
 }
 
 @media screen and (min-width: $viewport-medium) {
@@ -65,6 +70,11 @@
   .col {
       padding: $img-spacing/1.5;
   }
+  .data_image { 
+    width: auto;
+    height:100%;
+    border-bottom-left-radius: 20px; 
+  }
 }
 
 @media screen and (min-width: $viewport-large) {
@@ -76,6 +86,11 @@
   }
   .col {
       padding: $img-spacing;
+  }
+  .data_image { 
+    width: auto;
+    height:100%;
+    border-bottom-left-radius: 20px; 
   }
 }
 

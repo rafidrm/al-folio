@@ -1,23 +1,33 @@
 ---
 layout: about
 permalink: /
-title: <strong>Your</strong> Name
-description: <a href="">Affiliations</a>. Address. Contacts. Moto. Etc.
+title: Rafid Mahmood 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: RMahmood_rect.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>RS 308</p>
+    <p>University of Toronto</p>
+    <p>Toronto, ON, Canada</p>
 
 news: true
 social: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am an AI Resident for 2020-2021 at the NVIDIA Toronto AI Lab. I recently completed my PhD at the Department of Mechanical and Industrial Engineering, before which I completed my MASc at the Department of Electrical and Computer Engineering, both at the University of Toronto. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+
+My research interests span deep learning, data-driven optimization, and information theory. I have applied my research towards personalized healthcare, portfolio optimization, and real-time error correction codes. Outside of research, I have also worked on sports analytics and quantitative finance.
+
+
+I am also an avid traveller. In 2017, I completed a personal milestone of traveling to every continent (not including Antarctica). My current wish list of future destinations include Azerbaijan and South Africa.
+
+
+{% comment %}
+I am a PhD student with the Department of Mechanical and Industrial Engineering at the University of Toronto. My supervisor is [Professor Timothy C. Y. Chan](http://chan.mie.utoronto.ca). My research interests lie in the union of constrained optimization, information theory, and deep learning, for health care, sports analytics, and quantitative finance.
+
+In 2015, I completed my Masters of Applied Science with the Department of Electrical and Computer Engineering at the University of Toronto under [Professor Ashish Khisti](https://www.comm.utoronto.ca/~akhisti/), where I worked on coding theory for real-time multimedia streaming. 
+{% endcomment %}
+
