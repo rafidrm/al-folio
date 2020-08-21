@@ -6,7 +6,53 @@ permalink: /projects/
 
 
 
+{% for project in site.projects %}
 
+{% if project.redirect %}
+<div class="project">
+    <div class="thumbnail">
+        <a href="{{ project.redirect }}" target="_blank">
+        {% if project.img %}
+        <img class="thumbnail" src="{{ project.img | prepend: site.baseurl | prepend: site.url }}"/>
+        {% else %}
+        <div class="thumbnail blankbox"></div>
+        {% endif %}    
+        </a>
+    </div>
+    <span>
+        <h3>{{ project.title }}</h3>
+        <br/>
+        <p>{{ project.description }}</p>
+    </span>
+</div>
+
+
+{% else %}
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">
+        {% if project.img %}
+        <img class="thumbnail" src="{{ project.img | prepend: site.baseurl | prepend: site.url }}"/>
+        {% else %}
+        <div class="thumbnail blankbox"></div>
+        {% endif %}    
+        </a>
+    </div>
+    <span>
+        <h3>{{ project.title }}</h3>
+        <br/>
+        <p>{{ project.description }}</p>
+    </span>
+</div>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+{% comment %}
 
 {% for project in site.projects %}
 
@@ -49,3 +95,6 @@ permalink: /projects/
 {% endif %}
 
 {% endfor %}
+
+
+{% endcomment %}

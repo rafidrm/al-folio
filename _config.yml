@@ -76,6 +76,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  research:
+    output: true
+    permalink: /research/:path/
 
 news_limit: 5
 

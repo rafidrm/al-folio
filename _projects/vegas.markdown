@@ -1,11 +1,22 @@
 ---
 layout: page
-title: NHL Expansion Draft Optimizer 
-img: /assets/img/uoft-students.jpg
+title: 2017 NHL Expansion Draft Optimizer 
+img: /assets/img/Vegas_Golden_Knights_logo.jpg
 ---
 
 
+<div class="col">
+    <img class="col three center" src="{{ site.baseurl }}/assets/img/uoft-students.jpg" alt="" title="Photo taken from the Toronto Star"/>
+</div>
+<div class="col three caption">
+    Source: The Toronto Star.  
+</div>
+
+
+{% comment %}
 [Click here to go to the website.](http://nhlexpansiondraft.com)
+{% endcomment %}
+
 
 [Click here to see our coverage in The Toronto Star.](https://www.thestar.com/sports/hockey/2017/06/13/u-of-t-engineers-an-expansion-roster-for-vegas-with-the-click-of-a-button.html)
 
